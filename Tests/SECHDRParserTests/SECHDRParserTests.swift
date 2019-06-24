@@ -52,7 +52,6 @@ final class SECHDRParserTests: XCTestCase {
         var result: [String: Any]?
         do {
             result = try parser.parse(data: hdr)
-//            print(result)
         } catch let error {
             print(error)
 
