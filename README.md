@@ -6,7 +6,7 @@ For additional information, please visit [S.E.C.](https://www.sec.gov/edgar/sear
 
 ## Getting Started
 
-SwiftNIO primarily uses [SwiftPM](https://swift.org/package-manager/) as its build tool, so we recommend using that as well. If you want to depend on SwiftNIO in your own project, it's as simple as adding a `dependencies` clause to your `Package.swift`:
+SECHDRParser primarily uses [SwiftPM](https://swift.org/package-manager/) as its build tool, so we recommend using that as well. If you want to depend on SECHDRParser in your own project, it's as simple as adding a `dependencies` clause to your `Package.swift`:
 
 ```swift
 dependencies: [
@@ -76,7 +76,7 @@ Imagine there's a header file with the following contents:
 
 ## Example
 
-#### Read an `ACCESSION-NUMBER` from the above S.E.C filing.
+#### Read the `ACCESSION-NUMBER` from the above S.E.C filing.
 
 ```swift
 let parser = SECHDRParser()
