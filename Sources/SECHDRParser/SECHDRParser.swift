@@ -2,6 +2,8 @@ import Foundation
 
 public class SECHDRParser {
     var buffer: String!
+   
+    public init() {}
     
     public func parse(data: String) throws -> [String: Any]? {
         let xmlCleaned: String = data.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "")
