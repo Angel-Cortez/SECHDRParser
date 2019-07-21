@@ -102,11 +102,15 @@ public class SECHDRParser {
         
         // parseElementBody
         for i in newIndex..<buffer.count {
-            if buffer[buffer.index(buffer.startIndex, offsetBy: i)] == "<" {
-                newIndex = i
+            if i > 0 {
+                if buffer[buffer.index(buffer.startIndex, offsetBy: i)] == "<" {
+                    newIndex = i
+                    break
+                }
+                data += "\(buffer[buffer.index(buffer.startIndex, offsetBy: i)])"
+            } else {
                 break
             }
-            data += "\(buffer[buffer.index(buffer.startIndex, offsetBy: i)])"
         }
         
         return (key, data, newIndex)
@@ -118,7 +122,7 @@ public class SECHDRParser {
         var element = [String: Any]()
         //    print("ParseElementBody: \(key)")
         
-        while newIndex < buffer.count && !isEndTag( index: newIndex, key: key).0 {
+        while newIndex > 0 && newIndex < buffer.count && !isEndTag( index: newIndex, key: key).0 {
             if isNextElementShell( index: newIndex) {
                 do {
                     let parseResult = try parseElement( index: newIndex)
