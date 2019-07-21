@@ -1,6 +1,6 @@
 import Foundation
 
-class SECHDRParser {
+public class SECHDRParser {
     var buffer: String!
     
     public func parse(data: String) throws -> [String: Any]? {
