@@ -2,8 +2,6 @@ import Foundation
 
 public class SECHDRParser {
     var buffer: String!
-   
-    public init() {}
     
     public func parse(data: String) throws -> [String: Any]? {
         let xmlCleaned: String = data.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "")
@@ -103,16 +101,14 @@ public class SECHDRParser {
         newIndex = keySearch.1
         
         // parseElementBody
-        for i in newIndex..<buffer.count {
-            if i > 0 {
-                if buffer[buffer.index(buffer.startIndex, offsetBy: i)] == "<" {
-                    newIndex = i
-                    break
-                }
-                data += "\(buffer[buffer.index(buffer.startIndex, offsetBy: i)])"
-            } else {
+        
+        while newIndex < buffer.count {
+            if buffer[buffer.index(buffer.startIndex, offsetBy: newIndex)] == "<" {
+                
                 break
             }
+            data += "\(buffer[buffer.index(buffer.startIndex, offsetBy: newIndex)])"
+            newIndex += 1
         }
         
         return (key, data, newIndex)
@@ -124,7 +120,7 @@ public class SECHDRParser {
         var element = [String: Any]()
         //    print("ParseElementBody: \(key)")
         
-        while newIndex > 0 && newIndex < buffer.count && !isEndTag( index: newIndex, key: key).0 {
+        while newIndex < buffer.count && !isEndTag( index: newIndex, key: key).0 {
             if isNextElementShell( index: newIndex) {
                 do {
                     let parseResult = try parseElement( index: newIndex)

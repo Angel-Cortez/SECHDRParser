@@ -57,7 +57,7 @@ final class SECHDRParserTests: XCTestCase {
 
         }
         
-        XCTAssert(result != nil)
+        XCTAssert(result != nil && result!.values.count > 0)
     }
 
     static var allTests = [
