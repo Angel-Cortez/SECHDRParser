@@ -17,6 +17,7 @@ final class SECHDRParserTests: XCTestCase {
 <PUBLIC-DOCUMENT-COUNT>119
 <PERIOD>20190331
 <FILING-DATE>20190430
+<TABLE-FOOTNOTES-SECTION>
 <DATE-OF-FILING-DATE-CHANGE>20190430
 <FILER>
 <COMPANY-DATA>
@@ -44,6 +45,7 @@ final class SECHDRParserTests: XCTestCase {
 <STREET1>1 NEW ORCHARD RD
 <CITY>ARMONK
 <STATE>NY
+<PAPER>
 <ZIP>10504
 </MAIL-ADDRESS>
 </FILER>
@@ -52,6 +54,7 @@ final class SECHDRParserTests: XCTestCase {
         var result: [String: Any]?
         do {
             result = try parser.parse(data: hdr)
+            print(result)
         } catch let error {
             print(error)
 

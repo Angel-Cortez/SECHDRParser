@@ -10,7 +10,13 @@ public class SECHDRParser {
         let xmlCleaned: String = data.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "")
         // Used to remove the </SEC-HEADER> tag to make a SEC-HEADER a Data Tag
         // to allow for a much simpler BNF grammer
-        buffer = String(xmlCleaned[..<xmlCleaned.index(xmlCleaned.endIndex, offsetBy: -13)])
+        buffer = String(xmlCleaned[..<xmlCleaned.index(xmlCleaned.endIndex, offsetBy: -13)]).replacingOccurrences(of: #"<(\/?|\!?)(DOCTYPE CORRECTION|PAPER|PRIVATE-TO-PUBLIC|DELETION|CONFIRMING-COPY|CAPTION|STUB|COLUMN|TABLE-FOOTNOTES-SECTION|FOOTNOTES|PAGE)>"#, with: "", options: .regularExpression)
+        
+        /* The replace above is done to remove the tags without data to prevent the breaking of the
+         * parser
+         * Reference: https://stackoverflow.com/questions/4867894/sgml-parser-in-java
+         * Reference: https://www.sec.gov/info/edgar/pdsdissemspec910.pdf
+         */
         
         
         do {
