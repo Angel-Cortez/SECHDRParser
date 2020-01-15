@@ -15,9 +15,9 @@
             timestampString = "585413703.4194241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "parseElementBody(key:index:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "parseData(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -32,9 +32,9 @@
             timestampString = "585413703.41998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "parseData(index:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "findElementKey(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -49,9 +49,9 @@
             timestampString = "585413703.42005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "parseData(index:)"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "findElementKey(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -66,9 +66,9 @@
             timestampString = "585413703.420113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "parseData(index:)"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "findElementKey(index:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -84,8 +84,8 @@
             timestampString = "585413703.420174"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "parseData(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -101,8 +101,8 @@
             timestampString = "585413703.420235"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "parseData(index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -118,9 +118,41 @@
             timestampString = "585413703.420294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "parseData(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "386D6E2D-7887-4730-A6A2-3408D0B20E42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/SECHDRParserTests/SECHDRParserTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "testValidHdr()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "65AB37F4-965F-4FF6-A626-6E26F02BB288"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/SECHDRParserTests/SECHDRParserTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5"
+            endingLineNumber = "5"
+            landmarkName = "testValidHdr()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

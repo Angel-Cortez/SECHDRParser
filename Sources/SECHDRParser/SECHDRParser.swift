@@ -28,6 +28,7 @@ public class SECHDRParser {
     
     enum SECHDRParseError: Error {
         case noEndingTag(element: String)
+        case malformedData(misc: String)
     }
     
     private func isNextElementShell( index: Int) -> Bool {
@@ -108,6 +109,10 @@ public class SECHDRParser {
         let keySearch = findElementKey(index: index)
         let key = keySearch.0
         newIndex = keySearch.1
+        
+        if newIndex < 0 {
+            throw SECHDRParseError.malformedData(misc: "\(buffer[buffer.index(buffer.startIndex, offsetBy: index)...])")
+        }
         
         // parseElementBody
         
